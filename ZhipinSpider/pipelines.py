@@ -6,6 +6,8 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 import time
+import mysql.connector
+
 
 class ZhipinspiderPipeline(object):
     def process_item(self, item, spider):
@@ -41,3 +43,21 @@ class ImportToJson(object):
     # 爬虫关闭时执行的动作
     def close_spider(self, spider):
         self.f.close()
+
+
+class ImportToMysql(object):
+    def __init__(self):
+        self.conn = mysql.connector.connect(user='root', password="12345678", host='localhost', port="3306", database='runoob', use_unicode=True)
+        self.cur = self.conn.cursor()
+
+    def close_spider(self, spider):
+        print('--------关闭数据库资源------')
+        self.cur.close()
+        self.conn.close()
+
+    def process_item(self, item, spider):
+        self.cur.execute("INSERT INTO job_inf VALUES(null, %s, %s, %s, %s, %s, \
+                    %s, %s, %s, %s)", (item['title'], item['salary'], item['company'],
+                                       item['url'], item['work_addr'], item['industry'],
+                                       item.get('company_size'), item['recruiter'], item['publish_date']))
+        self.conn.commit()

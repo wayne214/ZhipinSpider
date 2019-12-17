@@ -66,6 +66,7 @@ COOKIES_ENABLED = False
 ITEM_PIPELINES = {
     'ZhipinSpider.pipelines.ZhipinspiderPipeline': 300,
     'ZhipinSpider.pipelines.ImportToJson': 310,
+    'ZhipinSpider.pipelines.ImportToMysql': 320,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

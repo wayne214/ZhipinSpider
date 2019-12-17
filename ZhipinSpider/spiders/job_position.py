@@ -17,7 +17,7 @@ class JobPositionSpider(scrapy.Spider):
     start_urls = ['https://www.zhipin.com/c101280100/h_101280100/']
 
     cookies = {
-        '_uab_collina=157648562499015413993343; __c=1576485624; __g=-; __l=l=%2Fwww.zhipin.com%2Fweb%2Fcommon%2Fsecurity-check.html%3Fseed%3D%252BbshLH7E%252Bmx1ulQG2KuimpnTevHPc5FG19ZasWTLm0U%253D%26name%3D6c486237%26ts%3D1576485623273%26callbackUrl%3D%252Fc101280100%252Fh_101280100%252F%26srcReferer%3D&r=&friend_source=0&friend_source=0; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1576485625; __a=5610085.1576485624..1576485624.14.1.14.14; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1576562365; __zp_stoken__=cfffnKJXmyi0G8KKLMgyJlNc8K9YfIas28rYW6BCbwJ1kBZBLPUsWqvrH6fn49JaS5dRBzuslwI4Ov4rn8FJfLt%2FpGp5gDdMmZiKCtDX7P060TbE7phONMVSoHAXjH%2B2h9qD'
+        '_uab_collina=157648562499015413993343; __c=1576485624; __g=-; __l=l=%2Fwww.zhipin.com%2Fweb%2Fcommon%2Fsecurity-check.html%3Fseed%3D%252BbshLH7E%252Bmx1ulQG2KuimpnTevHPc5FG19ZasWTLm0U%253D%26name%3D6c486237%26ts%3D1576485623273%26callbackUrl%3D%252Fc101280100%252Fh_101280100%252F%26srcReferer%3D&r=&friend_source=0&friend_source=0; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1576485625; __a=5610085.1576485624..1576485624.19.1.19.19; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1576575674; __zp_stoken__=cfffnKJXmyi0G8KKLMgyJlNc8M4Td9jogpAYou2hKoQSCqXX%2BRlmbzmrStJLdcUZCFFfBzuslwI4Ov4rn8FJfLt%2FpNahALSloS7Ff%2BolRnyVwsfE7phONMVSoHAXjH%2B2h9qD'
     }
 
     # 发送 header，伪装为浏览器
